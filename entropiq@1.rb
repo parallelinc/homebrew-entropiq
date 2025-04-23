@@ -5,14 +5,22 @@
 class EntropiqAT1 < Formula
   desc "The EntropiQ CLI."
   homepage "https://entropiq.com"
-  version "1.8.6"
+  version "1.8.11"
 
   depends_on "qemu"
   depends_on :macos
 
+  if Hardware::CPU.intel?
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.8.11/entropiq_1.8.11_darwin_amd64.tar.gz"
+    sha256 "5f24a6168cfd74e44a372dea87c3feae0448c8e81b92d23aaf449de843d5a967"
+
+    def install
+      bin.install "entropiq"
+    end
+  end
   if Hardware::CPU.arm?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.8.6/entropiq_1.8.6_darwin_arm64.tar.gz"
-    sha256 "f8b976b2bb1583403bb064a867c089185d7e5f9fb93c37b176d49cb58821f090"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.8.11/entropiq_1.8.11_darwin_arm64.tar.gz"
+    sha256 "4283233c12ce3c22dc20354381e36b033059fb165a47d21354ad68fe3df310d8"
 
     def install
       bin.install "entropiq"
