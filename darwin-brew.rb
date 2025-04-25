@@ -5,20 +5,20 @@
 class DarwinBrew < Formula
   desc "The EntropiQ CLI."
   homepage "https://entropiq.com"
-  version "1.20.4"
+  version "1.20.5"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.20.4/entropiq_1.20.4_darwin_amd64.tar.gz"
-    sha256 "0a5185a9f06ce83ca07c35d1382fa59ee6e0d2ae4157d63a79302adaa849aa67"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.20.5/entropiq_1.20.5_darwin_amd64.tar.gz"
+    sha256 "1f04c81babe75d01b00a153c9792def32befbddf8217e74d302b8ec407f6eedc"
 
     def install
       bin.install "entropiq"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.20.4/entropiq_1.20.4_darwin_arm64.tar.gz"
-    sha256 "af99b8436410c76d04dceef8ff36c98bba810c27a2f6568e6dbabef4f9cdb783"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.20.5/entropiq_1.20.5_darwin_arm64.tar.gz"
+    sha256 "f9852526e8182da8a69d3f8e5c78cc0cbe4512966911a7d4d3299f1fbce9b7ee"
 
     def install
       bin.install "entropiq"
