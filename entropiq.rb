@@ -5,22 +5,20 @@
 class Entropiq < Formula
   desc "The EntropiQ CLI."
   homepage "https://entropiq.com"
-  version "1.18.20"
-
-  depends_on "qemu"
+  version "1.22.22"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.18.20/entropiq_1.18.20_darwin_amd64.tar.gz"
-    sha256 "550308dd9c0b9b874e910b28f3e4b5dbb9b407fcf47fa7a43cd1dc057a9cd23d"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.22/entropiq_1.22.22_darwin_amd64.tar.gz"
+    sha256 "dc73af551275f0ea737c7b99c8ac81f5ee130860d352ed9a5bd0fa7bf6c932f5"
 
     def install
       bin.install "entropiq"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.18.20/entropiq_1.18.20_darwin_arm64.tar.gz"
-    sha256 "f141a42dd5f3d8b1136b4d0c96a6a8ff51fa422903463183b252fa4a6b5c1b31"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.22/entropiq_1.22.22_darwin_arm64.tar.gz"
+    sha256 "af8e772f5a847ef229841761d2dd2751a444a4f34285224fd2ab2ac164a463ad"
 
     def install
       bin.install "entropiq"
