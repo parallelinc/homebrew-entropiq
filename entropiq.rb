@@ -5,23 +5,23 @@
 class Entropiq < Formula
   desc "The EntropiQ CLI."
   homepage "https://entropiq.com"
-  version "1.22.42"
+  version "1.22.44"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.42/entropiq_1.22.42_darwin_amd64"
-    sha256 "c8116493641404397d7f0c8505456ed4fc501f2c1ff1d09ec73b47cc93a7696f"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.44/entropiq_1.22.44_darwin_amd64"
+    sha256 "b18c6cb11b2fe6ae0bfb6331940cd0e5a6beaf9f690b522a4e0750a52ed55211"
 
     def install
-      bin.install "entropiq_1.22.42_darwin_amd64" => "entropiq"
+      bin.install "entropiq_1.22.44_darwin_amd64" => "entropiq"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.42/entropiq_1.22.42_darwin_arm64"
-    sha256 "e97c90c0352644b47b047e4ce8fc34f241f5c7e9778535a9f4916ab64b3deb79"
+    url "https://github.com/parallelinc/entropiq-binary-cli/releases/download/1.22.44/entropiq_1.22.44_darwin_arm64"
+    sha256 "cae38b276c5e2d29e44c2a9055a1c6d59482fc5520a175e15586a7e22ba182af"
 
     def install
-      bin.install "entropiq_1.22.42_darwin_arm64" => "entropiq"
+      bin.install "entropiq_1.22.44_darwin_arm64" => "entropiq"
     end
   end
 end
